@@ -15,10 +15,10 @@ class CreateNewsTable extends Migration
     public function up()
     {
         Schema::create('news', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('title'); // ニュースのタイトルを保存するカラム
-            $table->string('body');  // ニュースの本文を保存するカラム
-            $table->string('image_path')->nullable();  // 画像のパスを保存するカラム
+            $table->increments('名前(name)');
+            $table->string('性別(gender)'); 
+            $table->string('趣味(hobby)'); 
+            $table->string('自己紹介(introduction)');
             $table->timestamps();
         });
     }
