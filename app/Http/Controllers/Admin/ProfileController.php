@@ -22,7 +22,7 @@ class ProfileController extends Controller
       // Varidationを行う
       $this->validate($request, Profile::$rules);
        
-      $profile = new Profiles;
+      $profile = new Profile;
       $form = $request->all();
 
       // フォームから画像が送信されてきたら、保存して、$profile->image_path に画像のパスを保存する
