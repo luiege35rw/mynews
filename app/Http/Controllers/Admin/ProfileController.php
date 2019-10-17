@@ -56,11 +56,11 @@ class ProfileController extends Controller
   public function edit(Request $request)
   {
       // News Modelからデータを取得する
-      $news = News::find($request->id);
-      if (empty($news)) {
+      $profile = Profile::find($request->id);
+      if (empty($profile)) {
         abort(404);    
       }
-      return view('admin.profile.edit', ['news_form' => $news]);
+      return view('admin.profile.edit', ['profiles_form' => $profile]);
   }
   public function update(Request $request)
   {
@@ -75,7 +75,7 @@ class ProfileController extends Controller
         $profile->image_path = basename($path);
         unset($profile_form['image']);
       } elseif (isset($request->remove)) {
-        $profiles->image_path = null;
+        $profile->image_path = null;
         unset($profile_form['remove']);
       }
       unset($news_form['_token']);

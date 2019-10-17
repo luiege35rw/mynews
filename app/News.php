@@ -12,6 +12,8 @@ class News extends Model
         'body' => 'required',
     );
 
+    protected $fillable = ['title','body'];
+    
     // 以下を追記
     // Newsモデルに関連付けを行う
     public function histories()

@@ -17,25 +17,25 @@
                     <div class="form-group row">
                         <label class="col-md-2" for="title">氏名</label>
                         <div class="col-md-10">
-                            <input type="text" class="form-control" name="name" value="{{ $news_form->name }}">
+                            <input type="text" class="form-control" name="name" value="{{ $profiles_form->name }}">
                         </div>
                     </div>
                      <div class="form-group row">
                         <label class="col-md-2" for="title">性別</label>
                         <div class="col-md-10">
-                            <input type="text" class="form-control" name="gender" value="{{ $news_form->gender }}">
+                            <input type="text" class="form-control" name="gender" value="{{ $profiles_form->gender }}">
                         </div>
                     </div>
                      <div class="form-group row">
                         <label class="col-md-2" for="title">趣味</label>
                         <div class="col-md-10">
-                            <input type="text" class="form-control" name="hobby" value="{{ $news_form->hobby }}">
+                            <input type="text" class="form-control" name="hobby" value="{{ $profiles_form->hobby }}">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-md-2" for="body">自己紹介欄</label></label>
                         <div class="col-md-10">
-                            <textarea class="form-control" name="introduction" rows="20">{{ $news_form->introduction }}</textarea>
+                            <textarea class="form-control" name="introduction" rows="20">{{ $profiles_form->introduction }}</textarea>
                         </div>
                     </div>
                     <div class="form-group row">
@@ -43,7 +43,7 @@
                         <div class="col-md-10">
                             <input type="file" class="form-control-file" name="image">
                             <div class="form-text text-info">
-                                設定中: {{ $news_form->image_path }}
+                                設定中: {{ $profiles_form->image_path }}
                             </div>
                             <div class="form-check">
                                 <label class="form-check-label">
@@ -54,7 +54,7 @@
                     </div>
                     <div class="form-group row">
                         <div class="col-md-10">
-                            <input type="hidden" name="id" value="{{ $news_form->id }}">
+                            <input type="hidden" name="id" value="{{ $profiles_form->id }}">
                             {{ csrf_field() }}
                             <input type="submit" class="btn btn-primary" value="更新">
                         </div>
