@@ -16,4 +16,10 @@ class Profile extends Model
           );
           
     protected $fillable = ['name','gender','hobby','introduction'];
+    
+     public function histories()
+    {
+      return $this->hasMany('App\Profile_histories');
+
+    }
 }
