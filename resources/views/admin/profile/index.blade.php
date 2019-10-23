@@ -7,9 +7,9 @@
             <h2>プロフィール一覧</h2>
         </div>
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-4"> 
                 <a href="{{ action('Admin\ProfileController@add') }}" role="button" class="btn btn-primary">新規作成</a>
-            </div>
+            </div>      
             <div class="col-md-8">
                 <form action="{{ action('Admin\ProfileController@index') }}" method="get">
                     <div class="form-group row">
